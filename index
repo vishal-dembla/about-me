@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Dembla - Recruiter & Builder</title>
+
+    <style>
+        /* 
+         * --- APPLE DESIGN PHILOSOPHY REVAMP ---
+         * Font: System UI Font Stack (SF Pro on Apple devices)
+         * Colors: Near-Black, Off-White, and Space Gray.
+         */
+
+        body {
+            /* Apple's System Font Stack */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #1d1d1f; /* Start with Apple's Almost Black */
+            color: #ffffff;
+            margin: 0;
+            -webkit-font-smoothing: antialiased; /* Smoother fonts on Webkit browsers */
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Global Type Styles --- */
+        h1, h2, p {
+            margin: 0;
+        }
+
+        h1, h2 {
+            font-weight: 600; /* Bold, clear headings */
+            letter-spacing: -0.022em; /* Subtle tightening for SF Pro */
+        }
+
+        p {
+            font-weight: 400; /* Regular weight for body */
+            letter-spacing: 0.03em;
+            line-height: 1.6;
+        }
+
+        /* --- Section Styling --- */
+        .description, .footer, .panel {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            box-sizing: border-box;
+            transform-origin: center center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
+        /* --- Individual Section Theming --- */
+
+        /* 1. Intro Section (Dark) */
+        .description {
+            background-color: #1d1d1f; /* Almost Black */
+            color: #ffffff;
+        }
+        .description h1 { font-size: 3.5rem; }
+        .description p {
+            font-size: 1.15rem;
+            max-width: 680px; 
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 2. Panel One (Light) */
+        .panel-one {
+            background-color: #f5f5f7; /* Off-White */
+            color: #1d1d1f; /* Dark text on light background */
+            z-index: 1;
+        }
+
+        /* 3. Panel Two (Dark) */
+        .panel-two {
+            background-color: #1d1d1f; /* Almost Black */
+            color: #ffffff;
+            z-index: 2;
+        }
+        
+        /* 4. Panel Three (Gray) */
+        .panel-three {
+            background-color: #a1a1a6; /* Space Gray */
+            color: #1d1d1f;
+            z-index: 3;
+        }
+        
+        /* 5. Panel Four (Light) */
+        .panel-four {
+            background-color: #f5f5f7; /* Off-White */
+            color: #1d1d1f;
+            z-index: 4;
+        }
+        
+        /* --- Panel Content Styles --- */
+        .panel div { max-width: 800px; }
+        .panel h2 { font-size: 3rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .panel p {
+            font-size: 1.35rem;
+        }
+
+        /* --- Footer Section (Dark) --- */
+        .footer {
+            background-color: #1d1d1f;
+            color: #ffffff;
+            z-index: 5; /* Ensure footer is on top at the end */
+            position: relative; /* Make it part of the normal flow after panels */
+        }
+        .footer h2 { font-size: 2.5rem; }
+        .footer p { color: rgba(255, 255, 255, 0.7); }
+        .footer a {
+            color: #2997ff; /* Apple's signature blue link color */
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="description">
+        <div>
+            <h1>👋 I’m Vishal Dembla</h1>
+            <p>Social Worker-turned-Recruiter-turned-product-tinkerer on a quest to 10× hiring with open-source tools, witty copy, and Agra-bred hustle.</p>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <section class="panel panel-one">
+            <div>
+                <h2>From Agra Streets to Boardroom Seats</h2>
+                <p>20+ years ago, I overcame stammering and  limited english knowledge to win debate trophies. <br>Today, I help Fortune 500 companies and CXOs decide who sits at the big table.</p>
+            </div>
+        </section>
+        <section class="panel panel-two">
+            <div>
+                <h2>The CXO Whisperer</h2>
+                <p>Placed leaders with 500+ firms - BCG, Google, KPMG, American Express, Tik Tok and more. <br>I blend precision, storytelling, and headhunter instinct.</p>
+            </div>
+        </section>
+        <section class="panel panel-three">
+            <div>
+                <h2>Builder of Free Recruiting Tools</h2>
+                <p>I ship work + work-tech related tools & outreach kits. <br>If it helps recruiters, I open-source it.</p>
+            </div>
+        </section>
+        <section class="panel panel-four">
+            <div>
+                <h2>AI, Copy & Coffee</h2>
+                <p>From prompts to prototypes. I'm exploring how AI can rewrite the hiring playbook, one tool at a time.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <div>
+            <h2>Let’s Build the Future of Hiring Together</h2>
+            <p>Made by <a href="https://www.linkedin.com/in/vishaldembla" target="_blank" rel="noopener noreferrer">Vishal Dembla</a> with help from Google AI Studio</p>
+        </div>
+    </div>
+
+    <!-- GSAP Library & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- ANIMATION 1: Panel Scaling ---
+        const panels = gsap.utils.toArray(".description, .panels-container .panel");
+        panels.forEach((panel, i) => {
+            if (i < panels.length - 1) { 
+                ScrollTrigger.create({
+                    trigger: panel,
+                    start: "bottom bottom", 
+                    end: "+=200%",
+                    onUpdate: self => {
+                        let progress = self.progress;
+                        let scaleValue = 1 - (progress * progress * 0.05);
+                        gsap.to(panel, {
+                            scale: scaleValue,
+                            opacity: 1 - progress * 1.5, // Fade out the panel as it scales
+                            ease: "power1.out",
+                            duration: 0.1
+                        });
+                    }
+                });
+            }
+        });
+
+        // --- ANIMATION 2: FADE & SLIDE UP TEXT ---
+        const textParagraphs = gsap.utils.toArray(".panel p");
+        
+        textParagraphs.forEach(p => {
+            gsap.from(p, { // Animate FROM these values
+                opacity: 0,
+                y: 20, // Start 20px lower
+                duration: 0.6,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: p,
+                    start: "top 85%", // Start animation when the top of the text is 85% down the screen
+                    toggleActions: "play none none none" // Play the animation once and leave it
+                }
+            });
+        });
+    </script>
+</body>
+</html>
